@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="HTML Full Course for Beginners">
+    <meta name="keywords" content="HTML, Course, Web Development, HTML Tutorial">
+    <title>Complete HTML Course</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #fff;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            font-size: 1.1rem;
+        }
+        nav {
+            background-color: #444;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 12px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 25px;
+            margin: 20px auto;
+            width: 85%;
+            max-width: 1100px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        footer p {
+            font-size: 1rem;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        .dark-mode header, .dark-mode footer {
+            background-color: #333;
+        }
+        .dark-mode nav {
+            background-color: #222;
+        }
+        .dark-mode .content {
+            background-color: #333;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Complete HTML Course</h1>
+    <p>Learn HTML from scratch and build your first website!</p>
+    <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</header>
+
+<nav>
+    <a href="#intro">Introduction</a>
+    <a href="#structure">HTML Structure</a>
+    <a href="#tags">Common Tags</a>
+    <a href="#forms">Forms</a>
+    <a href="#multimedia">Multimedia</a>
+    <a href="#advanced">Advanced Topics</a>
+</nav>
+
+<div class="content" id="intro">
+    <h2>Introduction to HTML</h2>
+    <p>HTML (Hypertext Markup Language) is the standard language used to create webpages. It defines the structure of a webpage using markup tags.</p>
+    <p>HTML is the building block for web development. Every webpage you see on the internet is created using HTML.</p>
+</div>
+
+<div class="content" id="structure">
+    <h2>HTML Structure</h2>
+    <p>A basic HTML document has the following structure:</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>Explanation:</p>
+    <ul>
+        <li><strong>&lt;!DOCTYPE html&gt;</strong>: Defines the document type and version of HTML.</li>
+        <li><strong>&lt;html&gt;</strong>: Root element that wraps the entire HTML document.</li>
+        <li><strong>&lt;head&gt;</strong>: Contains metadata like title, links to stylesheets, etc.</li>
+        <li><strong>&lt;body&gt;</strong>: Contains the visible content of the webpage.</li>
+    </ul>
+</div>
+
+<div class="content" id="tags">
+    <h2>Common HTML Tags</h2>
+    <p>Here are some common HTML tags:</p>
+    <ul>
+        <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong>: Headings, used for titles and subtitles.</li>
+        <li><strong>&lt;p&gt;</strong>: Paragraph tag, used to create text blocks.</li>
+        <li><strong>&lt;a&gt;</strong>: Anchor tag, used for links. Example: &lt;a href="https://www.example.com"&gt;Click me&lt;/a&gt;</li>
+        <li><strong>&lt;img&gt;</strong>: Image tag, used to display images. Example: &lt;img src="image.jpg" alt="Description"&gt;</li>
+        <li><strong>&lt;ul&gt;</strong>: Unordered list, used for bulleted lists. Example: &lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;/ul&gt;</li>
+    </ul>
+</div>
+
+<div class="content" id="forms">
+    <h2>HTML Forms</h2>
+    <p>Forms are used to collect user input. Here is an example:</p>
+    <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+<div class="content" id="multimedia">
+    <h2>Embedding Multimedia</h2>
+    <p>HTML allows you to embed images, audio, and video. Here are examples:</p>
+    <ul>
+        <li><strong>Image:</strong> &lt;img src="image.jpg" alt="Description"&gt;</li>
+        <li><strong>Audio:</strong> &lt;audio controls&gt;&lt;source src="audio.mp3" type="audio/mp3"&gt;&lt;/audio&gt;</li>
+        <li><strong>Video:</strong> &lt;video controls&gt;&lt;source src="video.mp4" type="video/mp4"&gt;&lt;/video&gt;</li>
+    </ul>
+</div>
+
+<div class="content" id="advanced">
+    <h2>Advanced HTML Topics</h2>
+    <p>As you progress, you can learn more advanced HTML topics such as:</p>
+    <ul>
+        <li><strong>Forms and Input Types</strong>: Creating complex forms with different input fields.</li>
+        <li><strong>SEO Optimization</strong>: Using meta tags, header tags, and sitemaps for better search engine visibility.</li>
+        <li><strong>HTML5 Semantic Tags</strong>: New tags like &lt;article&gt;, &lt;section&gt;, &lt;nav&gt;, &lt;header&gt;, and &lt;footer&gt;.</li>
+        <li><strong>HTML APIs</strong>: Using APIs like Geolocation, Canvas, Web Storage, etc.</li>
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2024 HTML Course. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+</script>
+
+</body>
+</html>
