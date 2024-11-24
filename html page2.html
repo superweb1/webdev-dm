@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comprehensive CSS Tutorial</title>
+
+    <!-- Inline CSS -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Section titles */
+        h2 {
+            color: #4CAF50;
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+
+        /* Styling for the content box */
+        .content-box {
+            background-color: #fff;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Code block styling */
+        .code-example {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        pre {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .content-box {
+                font-size: 0.9rem;
+                padding: 15px;
+            }
+
+            .code-example {
+                font-size: 0.9rem;
+                padding: 15px;
+            }
+
+            button {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .content-box {
+                font-size: 0.8rem;
+                padding: 10px;
+            }
+
+            .code-example {
+                font-size: 0.8rem;
+                padding: 10px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Comprehensive CSS Tutorial</h1>
+        <p>Learn about CSS elements and techniques with live examples and interactive code!</p>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="intro">
+        <h2>What is CSS?</h2>
+        <div class="content-box">
+            <p>Cascading Style Sheets (CSS) is the language used to style and lay out web pages. It controls the layout of multiple web pages all at once, enabling better control over the design of a website.</p>
+            <p>CSS allows for styling elements such as colors, fonts, layouts, and positioning of content, making websites both functional and visually appealing.</p>
+        </div>
+    </section>
+
+    <!-- CSS Layouts Section -->
+    <section id="layout">
+        <h2>CSS Layout Techniques</h2>
+        
+        <div class="content-box">
+            <p>CSS layout techniques allow for responsive and flexible website designs. There are two popular methods for layout: Flexbox and CSS Grid.</p>
+            <button id="toggleFlexGridBtn">Toggle Flexbox / Grid Layout</button>
+        </div>
+
+        <div class="content-box" id="layoutExample" style="display: flex;">
+            <div style="background: #4CAF50; padding: 20px; color: white; text-align: center; flex: 1;">Box 1</div>
+            <div style="background: #2196F3; padding: 20px; color: white; text-align: center; flex: 1;">Box 2</div>
+            <div style="background: #FFC107; padding: 20px; color: white; text-align: center; flex: 1;">Box 3</div>
+        </div>
+    </section>
+
+    <!-- CSS Colors Section -->
+    <section id="colors">
+        <h2>CSS Colors</h2>
+        <div class="content-box">
+            <p>CSS allows for a wide range of colors to be applied to elements, including named colors, HEX, RGB, RGBA, HSL, and HSLA values.</p>
+            <p>Example code:</p>
+            <div class="code-example">
+                <code>
+/* CSS color example */
+p {
+    color: #FF5733; /* HEX color */
+    background-color: rgba(255, 87, 51, 0.5); /* RGBA */
+}
+                </code>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS Typography Section -->
+    <section id="typography">
+        <h2>CSS Typography</h2>
+        <div class="content-box">
+            <p>Typography plays a vital role in web design. CSS allows customization of font family, size, style, weight, and text alignment.</p>
+            <p>Example code:</p>
+            <div class="code-example">
+                <code>
+/* CSS Typography example */
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+                </code>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS Animation Section -->
+    <section id="animation">
+        <h2>CSS Animations</h2>
+        <div class="content-box">
+            <p>CSS animations allow elements to change styles over time, creating engaging and dynamic visuals for users.</p>
+            <button id="animateBoxBtn">Animate Box</button>
+        </div>
+
+        <div class="content-box" id="animatingBox" style="width: 100px; height: 100px; background-color: #FF6347;">
+            <!-- Box to animate -->
+        </div>
+    </section>
+
+    <footer>
+        <p>Created with <span>&#x1F60E</span> using HTML, CSS, and JavaScript. Learn CSS with interactive examples!</p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        // Toggle Flexbox / Grid Layout
+        document.getElementById("toggleFlexGridBtn").addEventListener("click", function() {
+            const layoutExample = document.getElementById("layoutExample");
+
+            if (layoutExample.style.display === "flex") {
+                layoutExample.style.display = "grid";
+                layoutExample.style.gridTemplateColumns = "repeat(3, 1fr)";
+            } else {
+                layoutExample.style.display = "flex";
+            }
+        });
+
+        // CSS Animation - Button to animate box
+        document.getElementById("animateBoxBtn").addEventListener("click", function() {
+            const box = document.getElementById("animatingBox");
+
+            // Trigger animation
+            box.style.transition = "transform 2s";
+            box.style.transform = "translateX(300px)";
+
+            // Reset animation after 3 seconds
+            setTimeout(function() {
+                box.style.transition = "transform 2s";
+                box.style.transform = "translateX(0)";
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>
