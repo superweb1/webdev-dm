@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive JavaScript Functions</title>
+  
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Section */
+    section {
+      padding: 20px;
+      margin: 15px;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Buttons */
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Output Div */
+    #output {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      header, footer {
+        padding: 10px;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive JavaScript Functions Example</h1>
+  </header>
+
+  <section>
+    <h2>Test JavaScript Functions</h2>
+
+    <button id="alert-btn">Show Alert</button>
+    <button id="sum-btn">Calculate Sum</button>
+    <button id="random-btn">Generate Random Number</button>
+    <div id="output"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 JavaScript Functions Demo</p>
+  </footer>
+
+  <script>
+    // Function to show an alert
+    function showAlert() {
+      alert("This is an alert message!");
+    }
+
+    // Function to calculate the sum of two numbers
+    function calculateSum() {
+      let num1 = 10;
+      let num2 = 5;
+      let sum = num1 + num2;
+      document.getElementById("output").innerHTML = `The sum of ${num1} and ${num2} is ${sum}.`;
+    }
+
+    // Function to generate a random number
+    function generateRandomNumber() {
+      let randomNum = Math.random();
+      document.getElementById("output").innerHTML = `Random number: ${randomNum}`;
+    }
+
+    // Adding event listeners to buttons
+    document.getElementById("alert-btn").addEventListener("click", showAlert);
+    document.getElementById("sum-btn").addEventListener("click", calculateSum);
+    document.getElementById("random-btn").addEventListener("click", generateRandomNumber);
+
+    // Additional JavaScript Functions:
+
+    // Logging message to the console
+    console.log("This is a log message.");
+
+    // Prompting user for input
+    let name = prompt("What is your name?");
+    console.log(name);
+
+    // Confirm dialog for user action
+    let userChoice = confirm("Do you want to continue?");
+    console.log(userChoice);
+
+    // Delayed action using setTimeout
+    setTimeout(function() {
+      alert("This message is delayed by 2 seconds.");
+    }, 2000);
+
+    // Repeating action using setInterval
+    setInterval(function() {
+      console.log("This message repeats every 3 seconds.");
+    }, 3000);
+
+    // Parsing a number from a string
+    let numString = "123.45";
+    let parsedNumber = parseFloat(numString);
+    console.log(parsedNumber);
+
+    // Using Math.random to generate a random number
+    let randomNumber = Math.random();
+    console.log("Generated random number:", randomNumber);
+
+    // Rounding a number down using Math.floor
+    let roundedNumber = Math.floor(4.99);
+    console.log("Rounded number:", roundedNumber);
+
+    // Using JSON.stringify to convert an object to a JSON string
+    let obj = { name: "Alice", age: 25 };
+    let jsonString = JSON.stringify(obj);
+    console.log(jsonString);
+
+    // Using JSON.parse to convert JSON string back to an object
+    let jsonObj = '{"name":"Alice","age":25}';
+    let parsedObject = JSON.parse(jsonObj);
+    console.log(parsedObject);
+  </script>
+
+</body>
+</html>
