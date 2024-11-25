@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Full Course</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        /* Course Overview */
+        #course-overview ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        #course-overview ul li {
+            margin: 5px 0;
+        }
+
+        /* Lessons */
+        .lesson {
+            margin: 15px 0;
+        }
+
+        .lesson h3 {
+            margin-bottom: 10px;
+        }
+
+        .lesson-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .lesson ul {
+            padding-left: 20px;
+        }
+
+        /* Contact Form */
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation Bar -->
+    <header>
+        <h1>JavaScript Full Course</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#course-overview">Course Overview</a></li>
+                <li><a href="#lessons">Lessons</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Course Introduction Section -->
+        <section id="home">
+            <h2>Welcome to the JavaScript Full Course</h2>
+            <p>Learn JavaScript from scratch to advanced topics in this comprehensive course. Each section will guide you step-by-step through key JavaScript concepts with examples and explanations.</p>
+        </section>
+
+        <!-- Course Overview -->
+        <section id="course-overview">
+            <h2>Course Overview</h2>
+            <p>This course covers everything from the basics to advanced JavaScript topics, including:</p>
+            <ul>
+                <li>Introduction to JavaScript</li>
+                <li>Variables and Data Types</li>
+                <li>Operators and Expressions</li>
+                <li>Control Structures (If/Else, Loops)</li>
+                <li>Functions and Scope</li>
+                <li>DOM Manipulation</li>
+                <li>Objects and Arrays</li>
+                <li>Event Handling</li>
+                <li>Asynchronous JavaScript (Promises, async/await)</li>
+            </ul>
+        </section>
+
+        <!-- Lessons Section -->
+        <section id="lessons">
+            <h2>Lessons</h2>
+
+            <!-- Lesson 1: Variables and Data Types -->
+            <div class="lesson" id="lesson1">
+                <h3>Lesson 1: Variables and Data Types</h3>
+                <button onclick="showLessonContent(1)">Start Lesson</button>
+                <div class="lesson-content" id="lesson-content-1">
+                    <p>In JavaScript, you can store values using variables. Variables can hold different types of data:</p>
+                    <ul>
+                        <li><b>String:</b> Text (e.g., "Hello, World!")</li>
+                        <li><b>Number:</b> Numeric values (e.g., 42, 3.14)</li>
+                        <li><b>Boolean:</b> True or false (e.g., true, false)</li>
+                        <li><b>Object:</b> A collection of key-value pairs (e.g., {name: "John", age: 30})</li>
+                        <li><b>Array:</b> An ordered list of values (e.g., [1, 2, 3])</li>
+                        <li><b>Null:</b> Represents an intentional absence of a value</li>
+                        <li><b>Undefined:</b> A variable that has been declared but not yet assigned a value</li>
+                    </ul>
+                    <p>Example of declaring a variable:</p>
+                    <pre><code>let name = "John";</code></pre>
+                </div>
+            </div>
+
+            <!-- Lesson 2: Functions -->
+            <div class="lesson" id="lesson2">
+                <h3>Lesson 2: Functions</h3>
+                <button onclick="showLessonContent(2)">Start Lesson</button>
+                <div class="lesson-content" id="lesson-content-2">
+                    <p>Functions in JavaScript are blocks of code that are designed to perform a particular task. They can be invoked (called) by their name.</p>
+                    <ul>
+                        <li><b>Function Declaration:</b> <code>function myFunction() { }</code></li>
+                        <li><b>Function Expression:</b> <code>const myFunction = function() { }</code></li>
+                        <li><b>Arrow Function:</b> <code>const myFunction = () => { }</code></li>
+                    </ul>
+                    <p>Example:</p>
+                    <pre><code>function greet(name) {
+    return "Hello, " + name + "!";
+}</code></pre>
+                    <p>This function takes one parameter, <code>name</code>, and returns a greeting.</p>
+                </div>
+            </div>
+
+            <!-- Lesson 3: Loops -->
+            <div class="lesson" id="lesson3">
+                <h3>Lesson 3: Loops</h3>
+                <button onclick="showLessonContent(3)">Start Lesson</button>
+                <div class="lesson-content" id="lesson-content-3">
+                    <p>Loops allow you to execute a block of code multiple times. There are different types of loops:</p>
+                    <ul>
+                        <li><b>for loop:</b> Used for running a block of code a specific number of times.</li>
+                        <li><b>while loop:</b> Runs as long as a specified condition is true.</li>
+                        <li><b>do...while loop:</b> Executes code at least once and then continues based on a condition.</li>
+                    </ul>
+                    <p>Example of a <b>for loop</b>:</p>
+                    <pre><code>for (let i = 0; i < 5; i++) {
+    console.log(i);
+}</code></pre>
+                    <p>This will log numbers from 0 to 4 in the console.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="validateForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 JavaScript Full Course. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show lesson content
+        function showLessonContent(lessonNumber) {
+            const content = document.getElementById(`lesson-content-${lessonNumber}`);
+            
+            // Toggle visibility of the lesson content
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+
+        // Form validation
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission for validation
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("All fields must be filled out!");
+            } else {
+                alert("Your message has been sent successfully!");
+                document.getElementById('contact-form').reset();
+            }
+        }
+    </script>
+</body>
+</html>
